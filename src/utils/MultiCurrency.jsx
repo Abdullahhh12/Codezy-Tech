@@ -6,29 +6,20 @@ const MultiCurrency = () => {
   const [price2, setPrice2] = useState(200); // Default price if country is not detected
   const [userCurrency, setUserCurrency] = useState('USD'); // Default currency if country is not detected
 
+
   useEffect(() => {
-    const cachedCountry = localStorage.getItem('simulatedCountry');
-    if (cachedCountry) {
-      setUserCountry(cachedCountry);
-      updatePrices(cachedCountry);
-    } else {
-      fetchUserCountry();
-    }
+    fetchUserCountry();
   }, []);
 
   const fetchUserCountry = async () => {
     try {
-      // Simulate API call to fetch country code
-      const response = await fetch('http://ipapi.co/json/');
+      const response = await fetch('http://ipapi.co/json/'); // Replace with your IP geolocation API
       const data = await response.json();
       setUserCountry(data.country_code);
-      localStorage.setItem('simulatedCountry', data.country_code); // Cache the country code
       updatePrices(data.country_code);
     } catch (error) {
       console.error('Error fetching user country:', error);
-      setUserCountry('US'); // Default to US if there's an error
-      localStorage.setItem('simulatedCountry', 'US'); // Cache default country code
-      updatePrices('US');
+      // Handle error gracefully (e.g., set default country)
     }
   };
 
