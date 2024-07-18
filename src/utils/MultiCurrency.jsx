@@ -2,32 +2,24 @@ import React, { useEffect, useState } from 'react';
 
 const MultiCurrency = () => {
   const [userCountry, setUserCountry] = useState('');
-  const [price1, setPrice1] = useState(100); // Default price if country is not detected
-  const [price2, setPrice2] = useState(200); // Default price if country is not detected
-  const [userCurrency, setUserCurrency] = useState('USD'); // Default currency if country is not detected
+  const [price1, setPrice1] = useState(100);
+  const [price2, setPrice2] = useState(200);
+  const [userCurrency, setUserCurrency] = useState('USD');
 
   useEffect(() => {
-    const cachedCountry = localStorage.getItem('simulatedCountry');
-    if (cachedCountry) {
-      setUserCountry(cachedCountry);
-      updatePrices(cachedCountry);
-    } else {
-      fetchUserCountry();
-    }
+    fetchUserCountry();
   }, []);
 
   const fetchUserCountry = async () => {
     try {
-      // Simulate API call to fetch country code
-      const response = await fetch('http://ipapi.co/json/');
+      const response = await fetch('https://ipapi.co/json/'); // Replace with your IP geolocation API
       const data = await response.json();
+      console.log('Fetched country data:', data); // Debugging
       setUserCountry(data.country_code);
-      localStorage.setItem('simulatedCountry', data.country_code); // Cache the country code
       updatePrices(data.country_code);
     } catch (error) {
       console.error('Error fetching user country:', error);
-      setUserCountry('US'); // Default to US if there's an error
-      localStorage.setItem('simulatedCountry', 'US'); // Cache default country code
+      setUserCountry('US'); // Fallback to default
       updatePrices('US');
     }
   };
@@ -35,8 +27,8 @@ const MultiCurrency = () => {
   const updatePrices = (country) => {
     const { price1, price2, currency } = getPricesForCountry(country);
     setUserCurrency(currency || 'USD');
-    setPrice1(price1 || 100);
-    setPrice2(price2 || 200);
+    setPrice1(price1 || 180);
+    setPrice2(price2 || 240);
   };
 
   const getPricesForCountry = (countryCode) => {
@@ -60,8 +52,13 @@ const MultiCurrency = () => {
   }
 
   return (
+    <>
+      
     <div>
-       <div className='border-t-2 border-gray-300 mt-10 flex-col items-center flex justify-center md:flex-row md:space-x-12'>
+    <h1 className='text-center border-t-2 text-5xl font-mono mt-20 pt-10 '>Pricing</h1>
+    <p className='text-center pt-2 font-thin '>Pay Less Get More</p>
+       <div className=' mt-1 flex-col items-center flex justify-center md:flex-row md:space-x-12'>
+      
         <div className='w-[220px] bg-white  text-black h-[310px] rounded-lg mt-10 md:w-[300px] md:h-[400px] shadow-slate-50 shadow-sm  duration-300 ease-in-out hover:scale-105 '>
             <h2 className='text-center font-semibold '>Standard</h2>
 
@@ -92,6 +89,7 @@ const MultiCurrency = () => {
         </div>    
     </div>
     </div>
+    </>
   );
 };
 
