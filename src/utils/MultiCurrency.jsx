@@ -2,8 +2,8 @@ import React, { useEffect, useState } from 'react';
 
 const MultiCurrency = () => {
   const [userCountry, setUserCountry] = useState('');
-  const [price1, setPrice1] = useState(100);
-  const [price2, setPrice2] = useState(200);
+  const [price1, setPrice1] = useState(180);
+  const [price2, setPrice2] = useState(240);
   const [userCurrency, setUserCurrency] = useState('USD');
 
 
