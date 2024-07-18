@@ -13,23 +13,15 @@ const MultiCurrency = () => {
 
   const fetchUserCountry = async () => {
     try {
-<<<<<<< HEAD
       const response = await fetch('https://ipapi.co/json/'); // Replace with your IP geolocation API
-=======
-      const response = await fetch('http://ipapi.co/json/'); // Replace with your IP geolocation API
->>>>>>> 7663d587d127e362ec4472abfaac7106e72f5215
       const data = await response.json();
       console.log('Fetched country data:', data); // Debugging
       setUserCountry(data.country_code);
       updatePrices(data.country_code);
     } catch (error) {
       console.error('Error fetching user country:', error);
-<<<<<<< HEAD
       setUserCountry('US'); // Fallback to default
       updatePrices('US');
-=======
-      // Handle error gracefully (e.g., set default country)
->>>>>>> 7663d587d127e362ec4472abfaac7106e72f5215
     }
   };
 
