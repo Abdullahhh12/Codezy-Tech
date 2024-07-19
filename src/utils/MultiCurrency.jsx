@@ -2,8 +2,8 @@ import React, { useEffect, useState } from 'react';
 
 const MultiCurrency = () => {
   const [userCountry, setUserCountry] = useState('');
-  const [price1, setPrice1] = useState(100);
-  const [price2, setPrice2] = useState(200);
+  const [price1, setPrice1] = useState(180);
+  const [price2, setPrice2] = useState(240);
   const [userCurrency, setUserCurrency] = useState('USD');
 
 
@@ -13,23 +13,15 @@ const MultiCurrency = () => {
 
   const fetchUserCountry = async () => {
     try {
-<<<<<<< HEAD
       const response = await fetch('https://ipapi.co/json/'); // Replace with your IP geolocation API
-=======
-      const response = await fetch('http://ipapi.co/json/'); // Replace with your IP geolocation API
->>>>>>> 7663d587d127e362ec4472abfaac7106e72f5215
       const data = await response.json();
       console.log('Fetched country data:', data); // Debugging
       setUserCountry(data.country_code);
       updatePrices(data.country_code);
     } catch (error) {
       console.error('Error fetching user country:', error);
-<<<<<<< HEAD
       setUserCountry('US'); // Fallback to default
       updatePrices('US');
-=======
-      // Handle error gracefully (e.g., set default country)
->>>>>>> 7663d587d127e362ec4472abfaac7106e72f5215
     }
   };
 
@@ -72,12 +64,12 @@ const MultiCurrency = () => {
             <h2 className='text-center font-semibold '>Standard</h2>
 
             <p className='text-center font-semibold text-3xl md:text-4xl border-b-2'> {price1} {userCurrency} </p>
-            <ul className='flex flex-col pt-7 gap-3 items-center'>
-                <li>Brand Website</li>
-                <li>Web Hosting & Domain</li>
-                <li>Admin panel</li>
-                <li>Products</li>
-                <li>And Many More....</li>
+            <ul className='flex flex-col font-medium pt-7 gap-3 items-center'>
+                <li>✔ Brand Website</li>
+                <li>✔ Web Hosting & Domain</li>
+                <li>✔ Admin panel</li>
+                <li>✔ Products</li>
+                <li>✔ Standard themes</li>
             </ul>
             <button className='border-2 border-black  md:ml-20 md:mt-5 md:p-3 ml-14 mt-2 rounded p-1 bg-gradient-to-r from-green-500 to-green-800 text-white' onClick={handleClick}>Get Started</button>
 
@@ -86,12 +78,13 @@ const MultiCurrency = () => {
             <h2 className='text-center font-semibold '>Premium</h2>
 
             <p className='text-center font-semibold text-3xl md:text-4xl border-b-2'> {price2} {userCurrency}</p>
-            <ul className='flex flex-col pt-7 gap-3 items-center'>
-                <li>Brand Website</li>
-                <li>Web Hosting & Domain</li>
-                <li>Admin panel</li>
-                <li>unlimited Products</li>
-                <li>And Many More....</li>
+            <ul className='flex flex-col font-medium pt-7 gap-3 items-center'>
+                <li>✔ Brand Website</li>
+                <li>✔ Web Hosting & Domain</li>
+                <li>✔ Admin panel</li>
+                <li>✔ unlimited Products</li>
+                <li>✔ premium themes</li>
+                
             </ul>
             <button className='border-2 border-black  md:ml-20 md:mt-5 md:p-3 ml-14 mt-2 rounded p-1 bg-gradient-to-r from-green-500 to-green-800 text-white' onClick={handleClick}>Get Started</button>
 
