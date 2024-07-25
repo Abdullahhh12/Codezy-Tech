@@ -8,13 +8,14 @@ const Projects = () => {
   return (
     <>
     <Nav/>
-    <h1 className='text-center text-5xl font-mono pt-3 '>Our Work</h1>
+    <div className='min-h-screen'>
+    <h1 className='text-center text-3xl md:text-5xl font-mono pt-3 '>Our Work</h1>
     <p className='text-center pt-2 font-thin '>Building Digital Dreams into Reality</p>
-    <div className='flex justify-center  flex-wrap'>
-      <Cardproj name="Her Abaya" imgSrc={abayacol} link={"https://herabaya.com"} />
+    <div className='animate-slideInFromTop flex justify-center  flex-wrap '>
+      <Cardproj  name="Her Abaya" imgSrc={abayacol} link={"https://herabaya.com"}  />
       <Cardproj name="The Royal Collection" imgSrc={watchcol} link={"https://theroyalcollection.in"} />
-      
-       
+    
+    </div>
     </div>
     
       

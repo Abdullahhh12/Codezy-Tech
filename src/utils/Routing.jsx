@@ -5,6 +5,7 @@ import Contact from '../components/Contact'
 import Home from '../components/Home'
 import Services from '../components/Services'
 import Projects from '../components/Projects'
+import Footer from '../components/Footer'
 
 const Routing = () => {
   return (
@@ -17,6 +18,9 @@ const Routing = () => {
             <Route path='/Services' element={<Services/>} />
 
         </Routes>
+
+       
+
       
     </div>
   )

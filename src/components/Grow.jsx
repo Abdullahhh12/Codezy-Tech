@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 
 const Grow = () => {
   return (
-    <div className='w-full flex bg-black border-t-2 border-b-2 border-gray-400 mt-20 py-16 px-4'>
+    <div className='w-full flex bg-black border-t-2  border-gray-400 mt-20 py-16 px-4'>
     
         <div className='max-w-[1240px] mx-auto ml-14 grid md:grid-cols-2'>
             <video autoPlay loop muted className="w-3/4 border-white rounded border-2">

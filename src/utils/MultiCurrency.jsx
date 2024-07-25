@@ -60,7 +60,7 @@ const MultiCurrency = () => {
     <p className='text-center pt-2 font-thin '>Pay Less Get More</p>
        <div className=' mt-1 flex-col items-center flex justify-center md:flex-row md:space-x-12'>
       
-        <div className='w-[220px] bg-white  text-black h-[310px] rounded-lg mt-10 md:w-[300px] md:h-[400px] shadow-slate-50 shadow-sm  duration-300 ease-in-out hover:scale-105 '>
+        <div className='w-[220px] bg-white animate-slideInFromLeft  text-black h-[310px] rounded-lg mt-10 md:w-[300px] md:h-[400px] shadow-slate-50 shadow-sm  duration-300 ease-in-out hover:scale-105 '>
             <h2 className='text-center font-semibold '>Standard</h2>
 
             <p className='text-center font-semibold text-3xl md:text-4xl border-b-2'> {price1} {userCurrency} </p>
@@ -74,7 +74,7 @@ const MultiCurrency = () => {
             <button className='border-2 border-black  md:ml-20 md:mt-5 md:p-3 ml-14 mt-2 rounded p-1 bg-gradient-to-r from-green-500 to-green-800 text-white' onClick={handleClick}>Get Started</button>
 
         </div>
-        <div className='w-[220px] bg-white  text-black h-[310px] rounded-lg mt-10 md:w-[300px] md:h-[400px]  shadow-slate-50 shadow-sm duration-300  ease-in-out  hover:scale-105'>
+        <div className='w-[220px] bg-white animate-slideInFromRight  text-black h-[310px] rounded-lg mt-10 md:w-[300px] md:h-[400px]  shadow-slate-50 shadow-sm duration-300  ease-in-out  hover:scale-105'>
             <h2 className='text-center font-semibold '>Premium</h2>
 
             <p className='text-center font-semibold text-3xl md:text-4xl border-b-2'> {price2} {userCurrency}</p>

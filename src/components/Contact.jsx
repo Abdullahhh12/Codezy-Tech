@@ -30,7 +30,7 @@ const Contact = () => {
   return (
     <>
     <Nav/>
-    <div className='bg-white text-black w-full h-screen'>
+    <div className='bg-white text-black w-full h-[90vh] md:h-[75vh]'>
       <h1 className='flex justify-center flex-wrap pt-10 font-semibold text-3xl'> Contact Us</h1>
       <form onSubmit={onSubmit}>
         <div className='flex justify-center items-center md:space-x-3 flex-col md:flex-row pt-10'>

@@ -9,7 +9,7 @@ const Hero = () => {
   }
   return (
     <div className='text-white '>
-        <div className='max-w-[800px]  mt-[100px] w-full  mx-auto flex flex-col items-center'>
+        <div className='max-w-[800px] animate-zoomIn mt-[100px] w-full  mx-auto flex flex-col items-center'>
             <p className=' bg-clip-text text-transparent bg-gradient-to-r from-green-300 to-green-800 text-sm sm:text-xl '>Crafting seamless online store solutions</p>
             <h1 className=' pt-5 pb-5 md:text-8xl sm:text-6xl text-5xl'>Grow With us</h1>
             <div>
