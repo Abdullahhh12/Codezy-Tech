@@ -11,7 +11,7 @@ const Projects = () => {
     <div className='min-h-screen'>
     <h1 className='text-center text-3xl md:text-5xl font-mono pt-3 '>Our Work</h1>
     <p className='text-center pt-2 font-thin '>Building Digital Dreams into Reality</p>
-    <div className='animate-slideInFromTop flex justify-center  flex-wrap '>
+    <div className='animate-slideInFromBottom flex justify-center  flex-wrap '>
       <Cardproj  name="Her Abaya" imgSrc={abayacol} link={"https://herabaya.com"}  />
       <Cardproj name="The Royal Collection" imgSrc={watchcol} link={"https://theroyalcollection.in"} />
     
