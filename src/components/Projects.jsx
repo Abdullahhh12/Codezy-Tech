@@ -3,6 +3,7 @@ import Nav from './Nav'
 import Cardproj from './Cardproj'
 import watchcol from '../assets/watchcol.png'
 import abayacol from '../assets/abayacol.png'
+import ameera from '../assets/ameera.png'
 import dori from '../assets/dori.webp'
 
 const Projects = () => {
@@ -14,6 +15,7 @@ const Projects = () => {
     <p className='text-center pt-2 font-thin '>Building Digital Dreams into Reality</p>
     <div className='animate-slideInFromBottom flex justify-center  flex-wrap '>
       <Cardproj  name="The Dori" imgSrc={dori} link={"https://thedorii.com"}  />
+      <Cardproj  name="Alameera collection" imgSrc={ameera} link={"https://alameeracollection.com"}  />
       <Cardproj  name="Her Abaya" imgSrc={abayacol} link={"https://herabaya.com"}  />
       <Cardproj name="The Royal Collection" imgSrc={watchcol} link={"https://theroyalcollection.in"} />
     
